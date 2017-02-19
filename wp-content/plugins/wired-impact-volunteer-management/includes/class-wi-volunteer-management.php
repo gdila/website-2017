@@ -69,7 +69,7 @@ class WI_Volunteer_Management {
 	public function __construct() {
 
 		$this->plugin_name = 'wired-impact-volunteer-management';
-		$this->version = '1.1';
+		$this->version = '1.3';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -216,7 +216,6 @@ class WI_Volunteer_Management {
 		$this->loader->add_action(   'load-edit.php',                              $plugin_admin, 'load_opp_sort' );
 		$this->loader->add_action(   'wp_ajax_wivm_remove_rsvp',                   $plugin_admin, 'remove_user_opp_rsvp' );
 		$this->loader->add_action(   'save_post',                                  $plugin_admin, 'schedule_auto_email_reminder', 99, 2 );
-		$this->loader->add_action(   'send_auto_email_reminders',                  $plugin_admin, 'send_email_reminder' );
 		$this->loader->add_action(   'delete_user',                                $plugin_admin, 'delete_volunteer_rsvps', 10, 2 );
 		$this->loader->add_action(   'admin_notices',                              $plugin_admin, 'show_getting_started_notice' );
 		$this->loader->add_action(   'wp_ajax_wivm_hide_notice',                   $plugin_admin, 'hide_notice' );
@@ -237,6 +236,7 @@ class WI_Volunteer_Management {
       $plugin_widget = new WI_Volunteer_Management_Widget( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action(      'wp_enqueue_scripts',            $plugin_public, 'enqueue_styles' );
+		$this->loader->add_action(      'wp_head',            			 $plugin_public, 'enqueue_honeypot_styles' );
 		$this->loader->add_action(      'wp_enqueue_scripts',            $plugin_public, 'enqueue_scripts' );
 		$this->loader->add_action(      'init',                          $plugin_public, 'register_post_types' );
 		$this->loader->add_shortcode(   'one_time_volunteer_opps',       $plugin_public, 'display_one_time_volunteer_opps' );
@@ -246,6 +246,7 @@ class WI_Volunteer_Management {
 		$this->loader->add_filter(      'the_content',                   $plugin_public, 'show_meta_form_single' );
 		$this->loader->add_action(      'wp_ajax_wivm_sign_up',          $plugin_public, 'process_volunteer_sign_up' );
 		$this->loader->add_action(      'wp_ajax_nopriv_wivm_sign_up',   $plugin_public, 'process_volunteer_sign_up' );
+		$this->loader->add_action(   	'send_auto_email_reminders',     $plugin_public, 'send_email_reminder' );
       $this->loader->add_action(      'widgets_init',                  $plugin_widget, 'register_widget' );
 	}
 

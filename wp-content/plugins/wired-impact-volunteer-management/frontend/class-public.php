@@ -71,6 +71,29 @@ class WI_Volunteer_Management_Public {
 	}
 
 	/**
+	 * Hide the honeypot field for the volunteer sign up form.
+	 *
+	 * We load this CSS separately to be sure the field is hidden even if the 
+	 * admin has turned off loading the CSS within the settings.
+	 */
+	public function enqueue_honeypot_styles(){
+
+		if( is_singular( 'volunteer_opp' ) ): ?>
+		
+		<style>
+			/* Hide the Wired Impact Volunteer Management honeypot field under all circumstances */
+			.wivm_hp { 
+				display: none !important;
+			    position: absolute !important;
+			    left: -9000px;
+			}
+		</style>
+
+		<?php endif;
+
+	}
+
+	/**
 	 * Register the stylesheets for the public-facing side of the site.
 	 *
 	 * @since    0.1
@@ -314,6 +337,12 @@ class WI_Volunteer_Management_Public {
 			die();
 		}
 
+		//If the honeypot field exists and is filled out then bail 
+		if( isset( $form_fields['wivm_hp'] ) && $form_fields['wivm_hp'] != '' ){
+			_e( 'Security Check.', 'wired-impact-volunteer-management' );
+			die();
+		}
+
 		$opp = new WI_Volunteer_Management_Opportunity( $form_fields['wivm_opportunity_id'] );
 		if( $opp->should_allow_rvsps() == true ){
 
@@ -346,6 +375,29 @@ class WI_Volunteer_Management_Public {
  		echo $result; 
  		
  		die(); //Must use die() when using AJAX
+	}
+
+	/**
+	 * Send volunteer reminder email and store it in the database.
+	 *
+	 * This method is called using cron and is never called in any other way. This
+	 * method must be provided in the public class since the admin class is not
+	 * loaded when cron is run.
+	 * 
+	 * @param  int $opp_id Volunteer opportunity ID.
+	 */
+	public function send_email_reminder( $opp_id ){
+
+		$data_array = array(
+			'post_id' => $opp_id,
+			'user_id' => 0,
+		);
+
+		$opp 	= new WI_Volunteer_Management_Opportunity( $opp_id );
+		$email 	= new WI_Volunteer_Management_Email( $opp );
+		$email->send_volunteer_reminder_email();
+		$email->store_volunteer_email( $data_array );
+
 	}
 
 } //class WI_Volunteer_Management_Public

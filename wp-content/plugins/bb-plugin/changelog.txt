@@ -1,3 +1,115 @@
+<h4>1.9.4 - 01/18/2017</h4>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug with font fields introduced in 1.9.3.</li>
+</ul>
+
+<h4>1.9.3 - 01/17/2017</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Accessibility enhancements to Accordion, Contact Form, Content Slider, Icon, Menu, Post Carousel, Post Slider, Subscribe Form and Tabs modules. Thanks to John Russell (@laubsterboy) for the contribution!</li>
+	<li>Added reCAPTCHA support to the Subscribe Form and Contact Form modules.</li>
+	<li>Vimeo and YouTube scripts are now only loaded in the builder UI when a video from those services is present.</li>
+	<li>Removed the Read More button from the text editor in the builder UI as it does not work with builder layouts.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed global rows and modules not working after being duplicated under Tools > Duplicate Layout.</li>
+	<li>Fixed SSL mixed content issues with the Slideshow module.</li>
+	<li>Fixed the thumbnail navigation in the Slideshow module not showing on touch enabled desktops.</li>
+	<li>Fixed Menu module showing category descriptions for WooCommerce product categories.</li>
+	<li>Fixed issues with empty parent links in the Menu module.</li>
+	<li>Fixed Menu module not adding current-menu-item class when loaded from a template.</li>
+	<li>Fixed Menu module sub-menu background color being overridden by the menu background color.</li>
+	<li>Fixed a PHP warning in the Post Slider module with random ordering when using an offset.</li>
+	<li>Fixed IE layout issue with top aligned full height rows.</li>
+	<li>Fixed fonts with numbers in their names not working in font fields.</li>
+	<li>Fixed PHP warnings with Madmimi and MailerLite.</li>
+	<li>Fixed Maps module trying to open the Google Maps app in the Facebook Messenger app.</li>
+	<li>Fixed issues with autoplaying videos in the Content Slider module.</li>
+	<li>Fixed posts with double quotes in their names breaking suggest fields.</li>
+	<li>Fixed Number Counter modules in Tabs modules not displaying correctly.</li>
+	<li>Fixed row text color overriding colors set in the Pricing Table module.</li>
+	<li>Fixed Button module popup content being duplicated when rendered inside a Content Slider module via shortcode.</li>
+</ul>
+
+<h4>1.9.2 - 12/13/2016</h4>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed a bug introduced in 1.9.1 that broke live preview when editing settings.</li>
+	<li>Fixed gallery fields not working when images are saved as part of a template and don't exist on the site.</li>
+</ul>
+
+<h4>1.9.1 - 12/12/2016</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Updated Google fonts.</li>
+	<li>Updated translations.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed rows and modules not appearing when first added to the page.</li>
+	<li>Fixed column settings dropdown disappearing when the column has a background overlay color.</li>
+	<li>Fixed the button module lightbox opening all lightboxes on the page.</li>
+	<li>Fixed multiple RTL language CSS issues.</li>
+	<li>Fixed row and column text colors affecting select inputs.</li>
+	<li>Fixed CSS conflicts with third party themes and the builder UI.</li>
+	<li>Fixed parallax backgrounds being applied to child rows when inserting layouts via a shortcode.</li>
+</ul>
+
+<h4>1.9 - 12/06/2016</h4>
+<p>This update adds a number of new features. Be sure to check out <a href="https://www.wpbeaverbuilder.com/beaver-builder-1-9-shasta/">the blog post</a> for detailed info on what was added.</p>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Added the ability to drop columns into columns.</li>
+	<li>Added the ability to drag and drop existing columns.</li>
+	<li>Made multiple improvements for more accurate dragging and dropping.</li>
+	<li>Added responsive settings for margins, padding and borders.</li>
+	<li>Added new content page templates.</li>
+	<li>Template images are now loaded via HTTPS.</li>
+	<li>Added the ability to open a lightbox via a button.</li>
+	<li>Added the ability to add an alpha slider to color fields.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed responsive spacing not working when defaults are zeroed out in the global settings.</li>
+	<li>Fixed format select not showing in text editor fields.</li>
+	<li>Fixed incorrect color picker width in third party themes.</li>
+	<li>Fixed incorrect column group positions when dropping an existing module into a row.</li>
+	<li>Fixed multiple issues with responsive margins/padding not working.</li>
+	<li>Fixed a fatal error caused by modules that are no longer registered.</li>
+	<li>Fixed broken modules that have nested forms such as the Accordion module.</li>
+	<li>Fixed live preview issues for nested columns when editing the parent column.</li>
+	<li>Fixed issues with live preview not working correctly for responsive fields.</li>
+	<li>Fixed issues with global responsive margins and padding not working.</li>
+	<li>Fixed issues with equal height columns and nested columns.</li>
+	<li>Fixed Button module lightbox close button jump when placing the mouse over it.</li>
+	<li>Fixed Button module lightbox close button positioning.</li>
+	<li>Fixed drag and drop placeholder animation lag.</li>
+</ul>
+
+<h4>1.8.8 - 11/08/2016</h4>
+<p><strong>Enhancements</strong></p>
+<ul>
+	<li>Updated FontAwesome to 4.7.</li>
+	<li>Add tags support for AWeber and ActiveCampaign.</li>
+	<li>Added the "site" parameter to the fl_builder_insert_layout shortcode for inserting layouts from other sites on a network.</li>
+</ul>
+<p><strong>Bug Fixes</strong></p>
+<ul>
+	<li>Fixed module settings not loading when the site language is set to Farsi.</li>
+	<li>Fixed HTML validation error with the Icon module.</li>
+	<li>Fixed an error when setting the default editor to HTML using the wp_default_editor filter.</li>
+	<li>Fixed YouTube videos not working when column stacking order is reversed.</li>
+	<li>Fixed Content Slider module's navigation arrows not showing in IE11.</li>
+	<li>Fixed not being able to translate the comments popup link in the Posts module.</li>
+	<li>Fixed long template names not showing ellipses in the content panel.</li>
+	<li>Fixed empty global rows when sending a global row to the trash in wp-admin.</li>
+	<li>Fixed the Posts module breaking the render_query method in certain cases.</li>
+	<li>Fixed the position of the settings lightbox resize icon on RTL sites.</li>
+	<li>Fixed not being able to close accordion submenus in the Menu module.</li>
+</ul>
+
 <h4>1.8.7.1 - 10/13/2016</h4>
 <p><strong>Bug Fixes</strong></p>
 <ul>

@@ -2,7 +2,7 @@
 Contributors: wponlinesupport, anoopranawat 
 Tags: wponlinesupport, slick, image slider, slick slider, slick image slider, slider, image slider, header image slider, responsive image slider, responsive content slider, carousel, image carousel, carousel slider, content slider, coin slider, touch slider, text slider, responsive slider, responsive slideshow, Responsive Touch Slider, wp slider, wp image slider, wp header image slider, photo slider, responsive photo slider  
 Requires at least: 3.1
-Tested up to: 4.6.1
+Tested up to: 4.7
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -81,10 +81,10 @@ Check [PRO DEMO and Features](http://wponlinesupport.com/wp-plugin/wp-slick-slid
 = PRO Features Added : =
 > <strong>Premium Version</strong><br>
 >
-> * 20+ predefined stunning designs
-> * 14 Image Slider Designs
-> * 10 Image Carousel Slider Designs
-> * 8 Slider Variable width Designs
+> * 30+ Predefined stunning designs
+> * 24+ Image Slider Designs
+> * 19+ Image Carousel and Center Slider Designs
+> * 18+ Slider Variable width Designs
 > * Visual Composer Page builder support
 > * Drag & Drop frature to display slide in your order
 > * Custom CSS plugin setting option
@@ -129,6 +129,10 @@ Check [PRO DEMO and Features](http://wponlinesupport.com/wp-plugin/wp-slick-slid
 
 == Changelog ==
 
+= 1.2.6 (07/11/2016) =
+* [+] Added "How it work tab"
+* [-] Removed Pro design tab
+
 = 1.2.5 (20/10/2016) =
 * Updated all the designs and fix the bug
 * Fixed image display issue on mobile
@@ -162,6 +166,10 @@ Check [PRO DEMO and Features](http://wponlinesupport.com/wp-plugin/wp-slick-slid
 
 
 == Upgrade Notice ==
+
+= 1.2.6 (07/11/2016) =
+* [+] Added "How it work tab"
+* [-] Removed Pro design tab
 
 = 1.2.5 (20/10/2016) =
 * Updated all the designs and fix the bug

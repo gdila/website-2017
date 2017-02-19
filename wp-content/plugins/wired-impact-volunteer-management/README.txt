@@ -2,8 +2,8 @@
 Contributors: wiredimpact
 Tags: nonprofits, non profits, not-for-profit, volunteers, volunteer
 Requires at least: 4.0
-Tested up to: 4.5
-Stable tag: 1.1
+Tested up to: 4.7
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,16 @@ If the recurring opportunity will have the same volunteers each time, we’d rec
 1. View Volunteer Profiles
 
 == Changelog ==
+
+= 1.3 =
+* Added a honeypot spam protection feature to the volunteer signup form.
+
+= 1.2 =
+* Adjusted the plugin to allow for full translation including opportunity times and phone numbers.
+
+= 1.1.1 =
+* Fixed bug where automatic email reminders were not sending to volunteers in some cases.
+* Tested up to WordPress 4.7.
 
 = 1.1 =
 * Added widget to allow admins to list volunteer opportunities in the sidebar or other widgetized areas.

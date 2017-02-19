@@ -4,7 +4,7 @@ Donate link: http://www.aviplugins.com/donate/
 Tags: login, widget, login widget, widget login, sidebar login, login form, user login, authentication, facebook login, twitter login, google login, google plus, facebook, twitter, social login, social media, facebook comments, fb comment, forgot password, reset password, link
 Requires at least: 2.0.2
 Tested up to: 4.6.1
-Stable tag: 5.5.3
+Stable tag: 5.5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,7 +30,7 @@ This is a simple login form in the widget. This will allow users to login to the
 * Easy CSS implementation from admin panel.
 
 = Facebook Login Widget (PRO) =
-There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>,  <strong>Twitter</strong> and <strong>LinkedIn</strong>. You can get it <a href="http://www.aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 3.00</strong>
+There is a PRO version of this plugin that supports login with <strong>Facebook</strong>, <strong>Google</strong>, <strong>Twitter</strong>, <strong>LinkedIn</strong> and <strong>Instagram</strong> accounts. You can get it <a href="http://www.aviplugins.com/fb-login-widget-pro/" target="_blank">here</a> in <strong>USD 3.00</strong>
 
 <a href="http://www.aviplugins.com/demo/login/" target="_blank">Click here for a Live Demo</a>
 
@@ -69,7 +69,18 @@ This Add-on can be used to replace the default Wordpress Comments and insert Fac
 4. Go to `Login Widget Settings -> Login Logs` to check the user login log.
 4. Go to `Appearance->Widgets` in available widgets you will find `Login Widget AFO` widget, drag it to chosen widget area where you want it to appear.
 5. You can also use shortcodes to insert login form in post or pages. [login_widget title="Login Here"]
-5. Now visit your blog and you will see the login form section.
+5. Now visit your site and you will see the user login form.
+
+= Redirection After Login =
+To restrict a page from non logged in users and redirect users to requested URL after successful login, add this code in the top of the page template.
+ 
+> if ( !is_user_logged_in() ) { <br>
+wp_redirect('http://www.example.com/login/?redirect='.login_wid::curPageURL());<br>
+exit;<br>
+}<br> Change "http://www.example.com/login/" to your login page url.
+ 
+
+
 
 * The Serbo-Croatian Language translation file is provided by <a href="http://www.webhostinghub.com" target="_blank">Web Hosting Hub</a>  
 * Chinese translation is provided by Tianming Wu 
@@ -87,16 +98,27 @@ This Add-on can be used to replace the default Wordpress Comments and insert Fac
 
 == Screenshots ==
 
-1. Frontend login widget view
+1. Login widget
 2. Admin login with captcha security
-3. settings page view
-4. settings page view 2
-5. Widget view
-6. Users Login Log
-7. Forgot password form
-8. Facebook Comments Addon view
+3. General Settings
+4. Security Settings
+5. Error Message Settings
+6. Style Settings
+7. Email Settings
+8. Users Login Log
+9. Forgot Password form
+10. Facebook Comments Addon
 
 == Changelog ==
+
+= 5.5.6 =
+* Plugin is now compatible with <a href="https://wordpress.org/plugins/google-authenticator/">Google Authenticator</a> plugin.
+
+= 5.5.5 =
+* Plugin settings panel design updated.
+
+= 5.5.4 =
+* Option to redirect users to requested URL after successful login.
 
 = 5.5.3 =
 * Bug fixed.
