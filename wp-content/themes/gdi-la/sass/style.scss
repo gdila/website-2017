@@ -1,0 +1,487 @@
+/*
+Theme Name:     GDI LA
+Description:    Collective child theme for Girl Develop It Los Angeles
+Author:         nataliemac
+Template:       organic_collective
+
+(optional values you can add: Theme URI, Author URI, Version, License, License URI, Tags, Text Domain)
+*/
+
+@import 'compass';
+
+$color-pink: #F05B62;
+$color-grey: #333333;
+$color-blue: #00A9B4;
+$color-green: #92BB44;
+$color-yellow: #EDAB23;
+$color-maroon: #8B0036;
+
+$font-body: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+/* =========================================== */
+/* General customization */
+/* =========================================== */
+
+body,
+#navigation,
+.headline {
+	font-family: $font-body;
+}
+
+.content {
+	max-width: 960px;
+}
+
+.postarea,
+.article {
+	margin-bottom: 2.25em;
+	overflow: visible;
+	&:after {
+		clear: both;
+		content: '';
+		display: table;
+	}
+}
+
+p {
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+/* =========================================== */
+/* Content customization */
+/* =========================================== */
+
+.article {
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $font-body;
+		margin-top: 1em;
+		text-align: center;
+		text-transform: uppercase;
+		& + hr {
+			background: transparent;
+			border: 0 none;
+			border-bottom: 2px solid darken($color-yellow, 5%);
+			border-top: 2px solid darken($color-yellow, 5%);
+			height: 6px;
+			margin: 0 auto 2rem;
+			width: 400px;
+		}
+	}
+	& > p:first-of-type {
+		font-family: $font-body;
+	}
+	h3 {
+		& + hr {
+			border-bottom-color: $color-blue;
+			border-top-color: $color-blue;
+		}
+	}
+	h4 {
+		& + hr {
+			border-bottom-color: $color-green;
+			border-top-color: $color-green;
+		}
+	}
+}
+
+/* =========================================== */
+/* Header customization */
+/* =========================================== */
+
+#header {
+	background: $color-pink;
+}
+
+h1#logo,
+h4#logo {
+	margin: 1rem 0 0 1rem;
+}
+
+#navigation.navigation-main {
+	margin: 0 1rem 0 0;
+}
+
+.menu li {
+	border-left-color: darken($color-pink, 10%);
+}
+
+.menu a:focus,
+.menu a:hover,
+.menu a:active {
+	background: $color-grey;
+}
+
+.menu ul.sub-menu,
+.menu ul.children {
+	background: $color-grey;
+}
+
+.page-headline {
+	background: $color-blue;
+}
+
+/* =========================================== */
+/* Footer customization */
+/* =========================================== */
+
+.footer-information {
+	background: darken($color-blue, 20%);
+	.align-left p {
+		font-size: 1rem;
+	}
+}
+
+#mc_embed_signup {
+	div {
+		display: inline;
+	}
+	input[type='email'] {
+		border: 0 none;
+		border-radius: 2px;
+		@include box-sizing(border-box);
+		font-family: inherit;
+		font-size: inherit;
+		margin-bottom: 0.5rem;
+		max-width: 100%;
+		padding: 0.25rem 0.75rem;
+		width: 100%;
+	}
+	input[type='submit'] {
+		background: darken($color-yellow, 10%);
+		border: 0 none;
+		border-radius: 2px;
+		@include box-sizing(border-box);
+		color: white;
+		cursor: pointer;
+		font-family: inherit;
+		font-size: inherit;
+		max-width: 100%;
+		padding: 0.25rem 1rem;
+		text-transform: uppercase;
+		width: 100%;
+		&:focus, &:hover {
+			background: $color-yellow;
+		}
+	}
+}
+
+@media only screen and (min-width: 500px) {
+	#mc_embed_signup {
+		input[type='email'] {
+			margin-bottom: 0;
+			max-width: 50%;
+			width: auto;
+		}
+		input[type='submit'] {
+			max-width: 50%;
+			width: auto;
+		}
+	}
+}
+
+.social-icons li a {
+	color: white;
+}
+
+/* =========================================== */
+/* Home Page customization */
+/* =========================================== */
+
+.news-section {
+	background: transparent;
+}
+
+.featured-news {
+	padding-bottom: 0;
+	padding-top: 0;
+	.feature-img img {
+		margin-left: 0;
+	}
+	.holder {
+		border-bottom: 1px solid lighten($color-grey, 75%);
+		margin-bottom: 36px;
+	}
+	.padding {
+		padding-top: 0;
+	}
+	.headline {
+		line-height: 1.125;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	.post-category {
+		font-size: 1.6em;
+		line-height: 1.125;
+		a {
+			color: $color-blue;
+			text-decoration: none;
+			&:hover {
+				color: $color-green;
+			}
+		}
+	}
+}
+
+.page-template-template-home {
+	.widget {
+		background: transparent;
+		padding: 0;
+	}
+	.sidebar h6 {
+		border-bottom: 0 none;
+		font-size: 2.2em;
+		margin: 4px 0;
+		padding: 4px 0;
+	}
+	.meetup-widget-event-list {
+		margin: 24px 0;
+	}
+}
+
+/* =========================================== */
+/* Event List Customizations
+/* =========================================== */
+
+.sidebar .meetup-widget-event-list {
+	.wpm-event-listing {
+		margin-bottom: 36px;
+		&:after {
+			clear: both;
+			content: '';
+			display: table;
+		}
+	}
+	.widget-meetup-event-list-day {
+		font-size: 1.4em;
+		line-height: 1.25;
+		margin: 0;
+		overflow: hidden;
+		.wpm-single {
+			float: none;
+			margin: 0;
+			width: auto;
+			.date {
+				display: block;
+				font-size: 0.6em;
+			}
+			.event-more {
+				display: block;
+				font-size: 0.6em;
+			}
+		}
+	}
+	.wpm-date-display {
+		background: white;
+		border: 2px solid $color-blue;
+		color: $color-grey;
+		margin: 0 1em 0 0;
+		padding: 0;
+		.month {
+			background: $color-blue;
+			color: white;
+			display: block;
+			font-size: 0.9em;
+		}
+		.day {
+			display: block;
+			font-size: 1.2em;
+		}
+	}
+}
+
+.featured-team {
+	.event-thumb {
+		display: block;
+	}
+	.information {
+		.title {
+			background: lighten($color-grey, 66%);
+			border-top: 5px solid lighten($color-grey, 50%);
+			margin-top: 0;
+			a {
+				color: $color-grey;
+			}
+		}
+		.subtitle {
+			color: lighten($color-grey, 30%);
+			font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
+		}
+		.excerpt {
+			background: lighten($color-grey, 70%);
+			color: lighten($color-grey, 20%);
+			a {
+				color: darken($color-blue, 20%);
+			}
+		}
+		.border-line {
+			background-color: $color-pink;
+		}
+	}
+}
+
+/* =========================================== */
+/* Blog List Customizations
+/* =========================================== */
+
+.blog-holder {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.blog-listing {
+	&.holder {
+		border-bottom: 1px solid lighten($color-grey, 75%);
+		margin-bottom: 36px;
+		&:after {
+			clear: both;
+			content: '';
+			display: table;
+		}
+	}
+	.feature-img {
+		margin-top: 0;
+		padding-bottom: 36px;
+	}
+	.post-category {
+		font-size: 1.6em;
+		line-height: 1.125;
+		a {
+			color: $color-blue;
+			text-decoration: none;
+			&:hover {
+				color: $color-green;
+			}
+		}
+	}
+	.headline {
+		line-height: 1.125;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	.padding {
+		padding: 0 36px 36px 36px;
+	}
+}
+
+/* =========================================== */
+/* Blog Post Customizations
+/* =========================================== */
+
+.single-post {
+	.wp-post-image {
+		display: block;
+		margin: 0 auto;
+	}
+	.post-category {
+		font-size: 1.6em;
+		line-height: 1.125;
+		margin-top: 36px;
+		text-align: center;
+		a {
+			color: $color-blue;
+			text-decoration: none;
+			&:hover {
+				color: $color-green;
+			}
+		}
+	}
+	.headline {
+		line-height: 1.25;
+		margin-bottom: 0;
+		padding-bottom: 0;
+		text-align: center;
+	}
+	.post-author {
+		text-align: center;
+	}
+}
+
+.pull-quote {
+	font-size: 1.8em;
+	width: 33%;
+	p {
+		color: $color-pink;
+		line-height: 1.5;
+	}
+	cite {
+		color: $color-blue;
+		display: block;
+		text-align: right;
+	}
+}
+
+dl {
+	margin: 1em auto;
+	max-width: 960px;
+	dt {
+		font-size: 1.4em;
+		font-weight: bold;
+		margin: 1em 0;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.pull-quote {
+		&.alignright,
+		&.alignleft {
+			width: 40%;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.pull-quote {
+		&.alignright,
+		&.alignleft {
+			width: 100%;
+		}
+	}
+}
+
+/* =========================================== */
+/* Gravity Forms Customizations
+/* =========================================== */
+
+html body {
+	.gform_wrapper {
+		max-width: 100%;
+	}
+	.gform_wrapper .top_label .gfield_label {
+		margin: 0;
+	}
+	.gform_wrapper ul li.gfield {
+		margin: 0.5em 0;
+	}
+	.gform_wrapper label.gfield_label+div.ginput_container {
+		margin: 0;
+	}
+	.container form span {
+		display: inline-block;
+		margin-bottom: 0;
+	}
+}
+
+.gform_wrapper .gfield_error .ginput_complex .ginput_right input[type=email], .gform_wrapper .gfield_error .ginput_complex .ginput_right input[type=number], .gform_wrapper .gfield_error .ginput_complex .ginput_right input[type=password], .gform_wrapper .gfield_error .ginput_complex .ginput_right input[type=tel], .gform_wrapper .gfield_error .ginput_complex .ginput_right input[type=text], .gform_wrapper .gfield_error .ginput_complex .ginput_right input[type=url], .gform_wrapper .ginput_complex input[type=email], .gform_wrapper .ginput_complex input[type=number], .gform_wrapper .ginput_complex input[type=password], .gform_wrapper .ginput_complex input[type=tel], .gform_wrapper .ginput_complex input[type=text], .gform_wrapper .ginput_complex input[type=url] {
+	@include box-sizing(border-box);
+}
+
+/* =========================================== */
+/* Wired Impact Volunteer Customizations
+/* =========================================== */
+
+#wivm-sign-up-form input[type='submit'] {
+	background: $color-pink;
+	border: 0 none;
+	@include border-radius(6px);
+	color: white;
+	cursor: pointer;
+	float: none;
+	font-size: 1.6rem;
+	height: auto;
+	padding: 0.5rem 1rem;
+	@include transition(background 300ms);
+	&:hover {
+		background: $color-grey;
+	}
+}

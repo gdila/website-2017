@@ -1,0 +1,278 @@
+/*
+Theme Name: Beaver Builder Child Theme
+Theme URI: http://www.wpbeaverbuilder.com
+Version: 1.0
+Description: An example child theme that can be used as a starting point for custom development.
+Author: The Beaver Builder Team
+Author URI: http://www.fastlinemedia.com
+template: bb-theme
+*/
+
+/* Add your custom styles here... */ 
+
+/* KAREN's STYLES */
+
+/* submit button */
+input[type=button], input[type=submit] {
+    color: white;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    border:0px;
+}
+
+
+/* event detail page - list in sidebar */
+#meetup_event_list-2 .wpm-event-listing {
+  margin-bottom: 25px;
+  display:inline-block;
+}
+
+#meetup_event_list-2 .wpm-single {
+  display:inline-block;
+  text-align: left;
+  clear:all;
+}
+
+#meetup_event_list-2 div.wpm-date-display {
+  margin-right:15px;
+  color: #f05b62 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  width:20%;
+  background-color: transparent;
+}
+
+#meetup_event_list-2 span.month {padding-right:5px;}
+#meetup_event_list-2 span.date {display: block;} 
+#meetup_event_list-2 .event-more {
+  float:left;
+  background-color: #d2b25c;
+  padding: 5px 20px;
+  color: #fff;
+  font-size: 12px;
+  margin: 5px 0px ;
+}
+
+#meetup_event_list-2 .event-more:hover {
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+}
+
+div.fl-post-content.clearfix div.date-wrapper > h3 {display:none;}
+div.fl-post-content.clearfix > p {float:left;}
+div.fl-post-content.clearfix .meetup-backlink .button-wrapper {
+  text-align:left;
+  margin:0px;
+  padding-bottom: 0px;
+}
+
+ h1.fl-post-title {
+  letter-spacing: normal !important;
+  line-height: normal !important;
+  font-size: 40px;
+  padding-bottom: 10px;
+  border-bottom: 4px solid #f05b62;
+}
+
+div.fl-post-meta.fl-post-meta-top {
+  display:none;
+}
+
+#meetup_event_list-2 > h4 {
+  text-transform:uppercase;
+}
+
+/* volunteer opps */
+
+article.flexible-opp {
+  width:45%; 
+  float:left; clear:all; 
+  border: 1px solid #ddd;
+  margin:0 20px 0 20px !important;
+  padding: 0 20px 0 20px !important;
+  font-size:14px;
+  }
+
+  article.flexible-opp h2{
+  font-size:24px;
+  }
+
+  article.flexible-opp a.more-link{
+    background-color: #d2b25c;
+    padding: 10px 20px;
+    color: #fff;
+    float: right;
+    margin: 15px 0 15px 0;
+  }
+
+  article.one-time-opp {
+  width:28%; 
+  height:500px !important;
+  display:inline-block;
+  float:left; 
+  border: 1px solid #ddd;
+  margin: 20px !important;
+  padding: 0 20px 0 20px !important;
+  font-size:14px;
+  }
+
+   article.one-time-opp h2{
+  font-size:24px;
+  }
+
+  article.one-time-opp a.more-link{
+    background-color: #d2b25c;
+    padding: 10px 20px;
+    color: #fff;
+    float: right;
+    margin: 15px 0 15px 0;
+  }
+
+
+
+#menu-main-new-1 > li.menu-item {letter-spacing:1px;}
+
+.home-banner-text {
+  text-align:center;
+  line-height: 1.5 em;
+  letter-spacing: 1px;
+}
+
+body .gform_wrapper .gform_footer input[type=submit] {
+  border-radius: 0px;
+  color:white;}
+
+
+span.footer-icons a i {
+  font-size:24px;
+  color:#f05b62 !important;
+}
+
+span.footer-icons a:hover i{
+  font-size:24px;
+  color:white !important;
+}
+
+
+/* EVENTS (on home page and other) */
+
+div.events div.fl-post-grid-content {
+  width: 100%;
+  margin-top:10px;
+  display:inline-block;
+}
+
+div.events .fl-post-grid.masonry div.fl-post-grid-meta > span {
+  float:left;
+  border-left:4px solid #f05b62;
+  padding-left:5px;
+  padding-right:10px;
+  color: #f05b62 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  width:20%;
+}
+
+div.events h2.fl-post-grid-title {
+  float:right;
+  padding-left:10px;
+  width:80%;
+}
+
+div.events .fl-post-grid-content p a {
+  clear:all;
+  padding:5px;
+  background-color: #d8ae64;
+ display:inline-block;
+}
+
+/* NEWS (home page and other) */
+.news .fl-post-grid.masonry div.fl-post-grid-meta > span {
+  float:left;
+  border-left:4px solid #f05b62;
+  padding-left:5px;
+  padding-right:10px;
+  color: #f05b62 !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  width:20%;
+}
+
+.news h2.fl-post-grid-title {
+  float:right;
+  padding-left:10px;
+  width:80%;
+}
+
+.news div.fl-post-grid-content {
+  width: 100%;
+  margin-top:10px;
+  display:inline-block;}
+
+.news .fl-post-grid-content p a {
+  clear:all;
+  padding:5px;
+  background-color: #d8ae64;
+
+}
+
+
+
+/* Other */
+.fl-subscribe-form-inline.fl-subscribe-form-name-hide .fl-form-field {
+   /*width: 40%;*/
+   margin-right: -10px;
+}
+
+.fl-form-button {
+  margin-left: -10px;
+}
+
+.fl-post-grid-more {
+  background-color: #d2b25c;
+  padding: 10px 20px;
+  color: #fff;
+  float: right;
+  margin-bottom: 15px;
+}
+
+.fl-post-grid-more:hover, .student-btn:hover, .teacher-btn:hover {
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #333;
+}
+
+.student-btn {
+  background-color: #d2b25c;
+  padding: 15px 30px;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 30px;
+  border: 2px solid #d2b25c;
+}
+
+.teacher-btn {
+  background-color: transparent;
+  padding: 15px 30px;
+  color: ##d2b25c;
+  border: 2px solid #d2b25c;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+a.more-link {
+    background-color: #d2b25c;
+    padding: 10px 20px;
+    color: #fff;
+    float: right;
+    margin-bottom: 15px;
+}
+
+a.more-link:hover {
+  background-color: #333 !important;
+  color: #fff;
+  text-decoration: none;
+}
